@@ -57,11 +57,6 @@
 					<form:label path="password">Password:</form:label>
 					<form:input path="password" type="password" />
 				</p>
-				<p>
-					<form:errors path="confirm" class="error" />
-					<form:label path="confirm">Confirm Password:</form:label>
-					<form:input path="confirm" type="password" />
-				</p>
 				<button>Submit</button>
 			</form:form>
 		</div>

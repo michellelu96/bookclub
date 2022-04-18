@@ -25,7 +25,7 @@
 		</div>
 	</div>
 	<c:choose>
-		<c:when test="${user_id} == ${book.reader_id }">
+		<c:when test="${user_id == book.reader.id }">
 			<h4>You read ${book.title} by ${book.author }</h4>
 			<p>Here are your thoughts</p>
 		</c:when>
@@ -36,6 +36,6 @@
 	</c:choose>
 	
 	<p>${book.thought}</p>
-	<c:if test="${user_id } == ${book.reader_id }"><a href="/books/edit/${book.id }" class="button" >Edit</a></c:if>
+	<c:if test="${user_id == book.reader.id }"><a href="/books/edit/${book.id }" class="button" >Edit</a></c:if>
 </body>
 </html>
