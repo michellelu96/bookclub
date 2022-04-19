@@ -83,9 +83,8 @@ public class BookController {
 	
 	@PutMapping("/books/edit/{id}")
 	public String updateBook(@Valid @ModelAttribute("book") Book book, BindingResult result) {
-		if(result.hasErrors()) {
-			return "editBook.jsp";
-		}else {
+		if(result.hasErrors()) return "editBook.jsp";
+		else {
 			bookService.updateBook(book);
 			return "redirect:/home";
 		}
